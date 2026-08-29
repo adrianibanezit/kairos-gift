@@ -3,48 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f4e6d8">
-  <meta name="description" content="Una sesión de fotos en pareja para guardar un recuerdo para siempre.">
+  <meta name="theme-color" content="#f7eadf">
+  <meta name="description" content="Una sesión de fotos en familia para guardar un recuerdo para siempre.">
   <title>Kairos Visuals · Vale regalo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Allura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@500;600&family=Allura&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#regalo">Saltar al regalo</a>
   <canvas id="confetti" aria-hidden="true"></canvas>
 
   <main class="page">
-    <section class="hero">
+    <section class="hero" role="banner">
       <div class="hero-glow" aria-hidden="true"></div>
       <header class="top">
-        <img src="logo.png" class="logo" alt="Kairos Visuals" aria-label="Logotipo Kairos Visuals">
+        <img src="logo.png" class="logo" alt="Kairos Visuals — logotipo" loading="lazy">
       </header>
 
       <div class="hero-content">
         <p class="eyebrow">Un regalo para recordar</p>
         <h1>Una historia<br><em>para vosotros.</em></h1>
         <p class="lead">Una sesión de fotos en familia para convertir un momento bonito en un recuerdo para siempre.</p>
-        <a class="button" href="#regalo">Descubrir el regalo <span>↓</span></a>
+        <a class="button" href="#regalo" aria-describedby="cta-desc">Descubrir el regalo <span aria-hidden="true">↓</span></a>
+        <p id="cta-desc" class="sr-only">Baja a la sección del vale regalo</p>
       </div>
 
-      <div class="scroll-hint">Almería · luz · emoción</div>
+      <div class="scroll-hint" aria-hidden="true">Almería · luz · emoción</div>
     </section>
 
-    <section id="regalo" class="gift">
+    <section id="regalo" class="gift" aria-labelledby="gift-heading">
       <div class="gift-copy">
         <p class="eyebrow">Vale regalo</p>
-        <h2>Sesión de fotos<br><em>en familia</em></h2>
+        <h2 id="gift-heading">Sesión de fotos<br><em>en familia</em></h2>
         <div class="divider" aria-hidden="true">♥</div>
         <p>Disfrutad de una experiencia tranquila, natural y bonita en uno de los paisajes de Almería.</p>
 
-        <div class="value">
+        <div class="value" role="note">
           <span>Valorado en</span>
           <strong>250€</strong>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" role="region" aria-label="Detalle del vale regalo">
         <div class="card-top">KAIROS VISUALS</div>
         <div class="card-title">El mejor momento<br><em>es ahora.</em></div>
         <div class="card-line" aria-hidden="true"></div>
@@ -53,10 +55,10 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" aria-labelledby="exp-heading">
       <div>
         <p class="eyebrow">La experiencia</p>
-        <h2>Guardad lo que<br><em>sentís hoy.</em></h2>
+        <h2 id="exp-heading">Guardad lo que<br><em>sentís hoy.</em></h2>
       </div>
       <div class="features">
         <article><span>01</span><h3>Sesión en familia</h3><p>Una sesión cercana y natural, adaptada a vuestra historia.</p></article>
@@ -66,7 +68,7 @@
     </section>
 
     <footer role="contentinfo">
-      <img src="logo.png" class="logo footer-logo" alt="Kairos Visuals">
+      <img src="logo.png" class="logo footer-logo" alt="Kairos Visuals" loading="lazy">
       <p>Almería, luz, emoción y recuerdos para siempre.</p>
     </footer>
   </main>
